@@ -6,7 +6,7 @@
   <div class="home-component">
     <div class="lottery__row">
       <div class="lottery__column" *ngFor="let latestResult of latestResultsCollection!.all">
-        <img [src]="latestResult.logoImage" alt="lottery logo">
+        <img [src]="latestResult.logoImage" alt="lottery logo broken">
         <p>Name: {{latestResult.displayName}}</p>
         <p>Date: {{latestResult.drawDate}}</p>
         <p>Number: {{latestResult.drawNumber}}</p>
