@@ -3,6 +3,9 @@ import { PostService } from '../../../../providers/ajax/post.service';
 import { endPoints } from '../../../../../environments/environment';
 import { Observable } from 'rxjs';
 
+/**
+ * @description This is service is not working, I have left this here to show how I would have implemented it.
+ */
 @Injectable({
   providedIn: 'root',
 })
