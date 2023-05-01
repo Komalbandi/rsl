@@ -17,4 +17,22 @@ describe('LatestResultsModel', () => {
   it('should create an instance', () => {
     expect(new LatestResultsModel(latestResultData)).toBeTruthy();
   });
+
+  it('displayName should return correct value', () => {
+    expect(
+      new LatestResultsModel(latestResultData).displayName
+    ).toEqual(latestResultData.DrawDisplayName);
+  });
+
+  it('logoImage should return correct value', () => {
+    expect(
+      new LatestResultsModel(latestResultData).logoImage
+    ).toEqual(latestResultData.DrawLogoUrl);
+  });
+
+  it('drawDate should return correct value', () => {
+    expect(
+      new LatestResultsModel(latestResultData).drawDate
+    ).toEqual(latestResultData.DrawDate);
+  });
 });

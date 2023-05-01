@@ -1,4 +1,5 @@
 import { LatestResultsCollection } from './latest-results-collection';
+import { LatestResultsModel } from '../../models/latestResults/latest-results-model';
 
 describe('LatestResultsCollection', () => {
   const datas=[
@@ -26,8 +27,22 @@ describe('LatestResultsCollection', () => {
       "IsDiv1Unknown": true,
       "DrawCloseDateTimeUTC": "2013-08-31T09:35:00"
     }
-  ]
+  ];
   it('should create an instance', () => {
     expect(new LatestResultsCollection(datas)).toBeTruthy();
+  });
+
+  it('should return all datas',()=>{
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[]).length).toEqual(datas.length);
+
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[0].displayName).toEqual(datas[0].DrawDisplayName);
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[0].logoImage).toEqual(datas[0].DrawLogoUrl);
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[0].drawDate).toEqual(datas[0].DrawDate);
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[0].drawNumber).toEqual(datas[0].DrawNumber);
+
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[1].displayName).toEqual(datas[1].DrawDisplayName);
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[1].logoImage).toEqual(datas[1].DrawLogoUrl);
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[1].drawDate).toEqual(datas[1].DrawDate);
+    expect(((new LatestResultsCollection(datas)).all as LatestResultsModel[])[1].drawNumber).toEqual(datas[1].DrawNumber);
   });
 });
