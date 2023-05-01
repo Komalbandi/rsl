@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div *ngIf="!latestResultsCollection; else displayLotteries">
+  <h1>Loading...</h1>
+</div>
+
+<ng-template #displayLotteries>
+  <div class="home-component">
+    <div class="lottery__row">
+      <div class="lottery__column" *ngFor="let latestResult of latestResultsCollection!.all">
+        <img [src]="latestResult.logoImage" alt="lottery logo">
+        <p>Name: {{latestResult.displayName}}</p>
+        <p>Date: {{latestResult.drawDate}}</p>
+        <p>Number: {{latestResult.drawNumber}}</p>
+        <p>Jackpot value not available in service call</p>
+      </div>
+    </div>
+  </div>
+</ng-template>

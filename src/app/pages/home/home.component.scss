@@ -1,0 +1,11 @@
+.home-component {
+  .lottery__row {
+    @apply grid grid-cols-4 gap-1;
+
+    .lottery__column {
+      @apply inline-grid justify-items-center border-solid border-2 rounded-lg;
+      border-color: #e2e2e2;
+    }
+  }
+
+}

@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
     this.resultsService.results.subscribe({
       next:(res: LatestResultInterface[])=>{
         this.latestResultsCollection = new LatestResultsCollection(res);
-        console.log(this.latestResultsCollection);
       }
     });
   }

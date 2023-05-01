@@ -4,4 +4,21 @@ export class LatestResultsModel {
   constructor(data: LatestResultInterface) {
     this.latesResultData = data;
   }
+
+  get displayName(){
+    return this.latesResultData.DrawDisplayName;
+  }
+
+  get logoImage(){
+    return this.latesResultData.DrawLogoUrl;
+  }
+
+  get drawDate(){
+    return this.latesResultData.DrawDate;
+  }
+
+  get drawNumber(){
+    return this.latesResultData.DrawNumber;
+  }
+
 }
