@@ -1,6 +1,6 @@
 # Rsl
 
-This is a test project for RSL
+This is a test project
 
 ## system requirements to run the file
 
